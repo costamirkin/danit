@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Stop Current Animation and Play Next Animation in Queue</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+    .box{
+        width: 300px;
+        height: 200px;
+        background: #9d7ede;
+        margin-top: 20px;
+        border: 3px solid #6f40ce;
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    // Kill and toggle the current sliding animation
+    $(".toggle-btn").on("click", function(){
+        $(".box").stop().slideToggle(1000);
+    });
+});
+</script>
+</head>
+<body>
+	<p><strong>Note:</strong> Click the "Slide Toggle" button to start the animation, then click again before the animation is completed to understand this example.</p>
+    <button type="button" class="toggle-btn">Slide Toggle</button>
+    <div class="box"></div>
+</body>
+</html>                                		                            
